@@ -17,7 +17,7 @@ hobbies <- read_html(url) %>%
 hobbies_cleaned <- hobbies %>%
   str_remove("\\[[0-9]+\\]") %>%
   tolower() %>%
-  as_tibble(hobbies_cleaned) %>%
+  as_tibble() %>%
   rename(hobbies = value)
 
 #write data to csv
